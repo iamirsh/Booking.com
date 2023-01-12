@@ -1,0 +1,25 @@
+.navbar,.link{
+    display: flex;
+}
+.navbar{
+    justify-content: space-between;
+    background-color: #003580;
+    color: #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+p,span{
+    padding: 10px;
+}
+i{
+    padding: 0 5px;
+}
+@media only screen and (max-width: 600px) {
+    .navbar,.link{
+        flex-direction: column;
+    }
+    h1{
+        margin-bottom: 30px;
+    }
+  }
+
