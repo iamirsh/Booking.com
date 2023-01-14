@@ -1,0 +1,62 @@
+.header {
+    /* background-color: #003580; */
+    background-image: url('https://r-xx.bstatic.com/xdata/images/xphoto/2880x750/186278537.jpeg?k=115cdd62c5bcd037323172f127d26d7cf7e3fc6ea81047e95e26e44bff008f5d&o=');
+    color: white;
+    display: flex;
+    justify-content: center;
+    max-width: auto;
+    min-height: 375px;
+    position: relative;
+}
+
+.headerContainer {
+    width: 100%;
+    max-width: 1024px;
+    margin: 50px 0px 100px 0px;
+}
+
+.headerDesc {
+    margin: 10px 0px;
+}
+
+.headerBtn {
+    background-color: #0071c2;
+    color: white;
+    font-weight: 500;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.headerSearch{
+    height: 30px;
+    background-color: white;
+    border: 3px solid #febb02;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    max-width: 1024px;
+}
+.headerIcon{
+    color: lightgray;
+}
+.headerSearchItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+
+}
+.headerSearchInput{
+    border: none;
+    outline: none;
+}
+.headerSearchText{
+    color: lightgray;
+    cursor: pointer;
+}
