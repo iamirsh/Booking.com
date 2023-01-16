@@ -1,0 +1,23 @@
+.checkoutSection{
+    margin: auto;
+    width: 50%;
+    display: flex; 
+    justify-content: space-around;
+    
+}
+.paymentSection{
+    display: flex;
+    flex-direction: column;
+}
+.fareSection,.paymentSection{
+    margin: 20px;
+    border: 1px solid black;
+    padding: 20px;
+}
+input{
+    margin-bottom: 5px;
+}
+.fareSec{
+    display: flex;
+    justify-content: space-between;
+}

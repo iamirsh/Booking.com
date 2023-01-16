@@ -1,0 +1,12 @@
+.sectionHeader{
+    margin:30px 10rem ;
+}
+
+.sectionItems{
+    border: 1px solid black;
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
