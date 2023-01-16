@@ -1,7 +1,7 @@
 import React from 'react'
 import './checkoutPage.css';
 
-
+// Irshad Ahmad
 export const CheckoutPage = () => {
     return (
         <div className='checkoutSection'>
