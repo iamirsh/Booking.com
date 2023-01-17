@@ -4,6 +4,7 @@ import { Hotels } from "../../Component/Sections/Hotels";
 
 
 export const Home = ()=>{
+
     return(
         <>
         <Header1 />

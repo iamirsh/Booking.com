@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Ticket.css";
 import { Link } from 'react-router-dom';
 
+
 export const Hotels = () => {
+  const [hotel, setHotel] = useState();
+  
+    useEffect(() => {
+        const hotelApiData = async () => {
+            const response = await fetch('https://content.newtonschool.co/v1/pr/63b85bcf735f93791e09caf4/hotels');
+            const data = await response.json();
+            setHotel(data);
+            console.log(data);
+        };
+        hotelApiData();
+    },[]);
+
   return (
     <div className='section'>
         <div className="sectionHeader">
-            <h3>Available Movie</h3>
+            <h3>Available Hotel</h3>
         </div>
         <div className="sectionItems">
           <div>
-            <p>HOTELS</p>
+            <p>Goa</p>
             <p>Ginger</p>
             <p>CITY</p>
             <p>Mumbai</p>

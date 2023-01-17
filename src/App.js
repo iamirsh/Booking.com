@@ -6,8 +6,11 @@ import {Flights} from './Pages/Flights/Flights';
 import { Login } from './Component/Login/Login';
 import { SignUp } from './Component/Login/SignUp';
 import {CheckoutPage} from './Component/Checkout/CheckoutPage';
+import { useState } from 'react';
 
 function App() {
+  const [city, setCity] = useState('');
+  
   return (
     <div className="App">
       <BrowserRouter>
