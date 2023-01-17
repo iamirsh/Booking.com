@@ -31,46 +31,41 @@ import './Login.css';
       setLogin(!login);
     }
   }
-
-
- 
-  
-
   return (
     <>
  
-        <div className="container">
+        <div className="container col-3 mt-5">
           {" "}
           {login ? (
             <form onSubmit={handleFormSubmit}>
               <h3>Register</h3>
 
-              <div className="form-group">
+              <div className="form-group mt-3">
                 <label>Name</label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control mt-2"
                   placeholder="Enter Full Name"
                   name="name"
                   onChange={(event) => setName(event.target.value)}
                 />
               </div>
 
-              <div className="form-group">
+              <div className="form-group mt-2">
                 <label>Email</label>
                 <input
                   type="email"
-                  className="form-control"
+                  className="form-control mt-2"
                   placeholder="Enter email"
                   onChange={(event) => setEmail(event.target.value)}
                 />
               </div>
 
-              <div className="form-group">
+              <div className="form-group mt-2">
                 <label>Password</label>
                 <input
                   type="password"
-                  className="form-control"
+                  className="form-control mt-2"
                   placeholder="Enter password"
                   onChange={(event) => setPassword(event.target.value)}
                 />
@@ -80,8 +75,8 @@ import './Login.css';
               <button type="submit" className="btn btn-primary btn-lg btn-block mt-3">
                 Register
               </button>
-              <p className="forgot-password text-right"><Link to="/login" >
-                Already registered?{" "}Login</Link>
+              <p className="forgot-password text-right">
+                <Link to="/login" >Already registered?{" "}Login</Link>
               </p>
               {flag && (
                 <Alert color="primary" variant="danger">

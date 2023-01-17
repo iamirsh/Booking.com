@@ -33,7 +33,7 @@ export const Login = ()=> {
   
 
   return (
-    <div >
+    <div className="container col-3 mt-5" >
       {home ? (
         <form onSubmit={handleLogin} className="container mt-3">
           <h3>LogIn</h3>

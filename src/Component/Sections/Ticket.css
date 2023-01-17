@@ -1,12 +1,21 @@
-.sectionHeader{
-    margin:30px 10rem ;
+.sectionHeader {
+    margin: 30px 10rem;
 }
 
-.sectionItems{
+
+.sectionItems {
+    position: relative;
+
     border: 1px solid black;
     margin: auto;
     width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+}
+
+.bookBtn {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
