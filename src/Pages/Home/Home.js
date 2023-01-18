@@ -8,14 +8,9 @@ export const Home = () => {
     const [checkin, setCheckin] = useState("");
     const [checkout, setCheckout] = useState("");
     const [guests, setGuests] = useState("");
+   
 
-    function print(){
-        console.log(roomType);
-        console.log(city);
-        console.log(checkin);
-        console.log(checkout);
-        console.log(guests);
-    }
+    
 
     //Api call
     const [data, setData] = useState([]);
@@ -58,10 +53,11 @@ export const Home = () => {
                         <label>GUESTS</label>
                         <input type="text" onChange={(e) => setGuests(e.target.value)} />
                     </div>
-                    <button className='btn btn-primary' onClick={print}>Search</button>
+                    <button className='btn btn-primary' >Search</button>
                 </div>
             </div>
-            <Hotels data={data} />
+            <Hotels data={data} roomType={roomType} city={city} checkin={checkin} checkout={checkout} guests={guests} />
         </div>
     )
+    
 }

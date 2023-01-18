@@ -4,40 +4,45 @@ import { Link } from 'react-router-dom';
 
 
 export const Hotels = (props) => {
+  
+console.log(props.city,props.checkin,props.checkout,props.guests);
 
   return (
     <div className='section'>
       <div className="sectionHeader">
         <h3>Available Hotel</h3>
       </div>
-      {props.data.map((el) => (
-        <div className="sectionItems container mt-3 mb-3 w-50">
+      {props.data.filter((el) => (
+
+        el.city === 'props.city' ?
+        (<div className="sectionItems container mt-3 mb-3 w-50">
         <div>
-          <p>Hotel</p>
-          <p>{el.hotel_name}</p>
+          <p >Hotel</p>
+          <p className='bold'>{el.hotel_name}</p>
           <p>CITY</p>
-          <p>{el.city}</p>
+          <p className='bold'>{el.city}</p>
           <p>RATING</p>
-          <p>{el.rating}</p>
+          <p className='bold'>{el.rating}</p>
         </div>
         <div>
           <p>CHECK-IN</p>
-          <p>{el.check_in}</p>
+          <p className='bold'>{el.check_in}</p>
           <p>CHECK-OUT</p>
-          <p>{el.check_out}</p>
+          <p className='bold'>{el.check_out}</p>
         </div>
         <div>
           <p>Price:</p>
-          <p>{el.price_per_night} per night</p>
+          <p className='bold'>{el.price_per_night} per night</p>
           <p>Room:</p>
-          <p>King</p>
+          <p className='bold'>{props.roomType}</p>
           <p>Guests:</p>
-          <p>{el.guests}</p>
+          <p className='bold'>{el.guests}</p>
         </div>
         <div className='bookBtn'>
           <Link to='/checkout'> <button className='btn btn-primary '>Book</button></Link>
         </div>
-      </div>
+      </div>)
+      : <h1>Not found</h1>
       ))}
       
     </div>

@@ -9,7 +9,6 @@ import './Login.css';
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const [flag, setFlag] = useState(false);
   const [login, setLogin] = useState(true);
   
@@ -22,18 +21,15 @@ import './Login.css';
     } else {
       setFlag(false);
       localStorage.setItem("sanskarEmail", JSON.stringify(email));
-      localStorage.setItem(
-        "sanskarPassword",
-        JSON.stringify(password)
-      );
+      localStorage.setItem("sanskarPassword",JSON.stringify(password));
       console.log("Saved in Local Storage");
 
       setLogin(!login);
     }
   }
+  
   return (
     <>
- 
         <div className="container col-3 mt-5">
           {" "}
           {login ? (

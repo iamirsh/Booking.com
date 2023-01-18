@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FlightTicket } from '../../Component/Sections/FlightTicket'
 
 export const Flights = () => {
@@ -15,6 +15,18 @@ export const Flights = () => {
     console.log(departure);
     console.log(returndate);
 }
+  //Api call
+  const [data, setData] = useState([]);
+    
+  const hotelApiData = async () => {
+      const response = await fetch('https://content.newtonschool.co/v1/pr/63b85b1209f0a79e89e17e3a/flights');
+      const res = await response.json();
+      setData(res);
+  };
+
+  useEffect(() => {
+      hotelApiData();
+  }, []);
 
   return (
     <div className='container'>
@@ -46,7 +58,7 @@ export const Flights = () => {
           <button className='btn btn-primary'onClick={print} >Search</button>
         </div>
       </div>
-      <FlightTicket />
+      <FlightTicket data={data} />
     </div>
   )
 }

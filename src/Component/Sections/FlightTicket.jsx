@@ -2,40 +2,43 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "./Ticket.css";
 
-export const FlightTicket = () => {
+export const FlightTicket = (props) => {
+  
   return (
     <div className='section'>
         <div className="sectionHeader">
-            <h3>Available Movie</h3>
+            <h3>Available Flights</h3>
         </div>
-        <div className="sectionItems">
+        {props.data.map((el) => (
+        <div className="sectionItems mt-3">
           <div>
             <p>FROM:</p>
-            <p>Delhi</p>
+            <p className='bold'>{el.from}</p>
             <p>TO:</p>
-            <p>Goa</p>
+            <p className='bold'>{el.to}</p>
             <p>Airline:</p>
-            <p>Indigo</p>
+            <p className='bold'>{el.airlineName}</p>
           </div>
           <div>
             <p>DEPARTURE</p>
-            <p>02:00PM | 12-02-2023</p>
+            <p className='bold'>{el.departure.departureTime} | {el.departure.departureDate}</p>
             <p>RETURN</p>
-            <p>10:00PM | 12-02-2023</p>
+            <p className='bold'>{el.return.returnTime} | {el.return.returnDate} </p>
           </div>
           <div>
             <p>Price:</p>
-            <p>7500</p>
+            <p className='bold'>{el.price}</p>
             <p>Via:</p>
-            <p>Mumbai</p>
+            <p className='bold'>{el.via}</p>
             <p>Duration:</p>
-            <p>2hr 45min</p>
+            <p className='bold'>{el.duration}</p>
           </div>
-          <div>
-           <Link to='/checkout'> <button className='btn btn-primary '>Book</button></Link>
+          <div >
+           <Link to='/checkout'> <button className='btn btn-primary'>Book</button></Link>
           </div>
           
         </div>
+))}
     </div>
   )
 }
